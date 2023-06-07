@@ -9,7 +9,7 @@ interface Props {
 const SearchInput = ({ onSearch }: Props) => {
   const ref = useRef<HTMLInputElement>(null)
 
-  const onSubmit = (event) => {
+  const onSubmit = (event: React.FormEvent) => {
     event.preventDefault()
     if (ref.current) {
       onSearch(ref.current.value)

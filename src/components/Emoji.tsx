@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Emoji = ({ rating }: Props) => {
-  if (rating < 3) return
+  if (rating < 3) return null
 
   const bullsEye = '🎯'
   const thumbsUp = '👍'
@@ -20,8 +20,8 @@ const Emoji = ({ rating }: Props) => {
     <Text fontSize={emojiMap[rating].boxSize} marginTop={1}>
       {emojiMap[rating].src}
     </Text>
-    // <Image {...emojiMap[rating]} boxSize={'25px'} />
   )
+  // <Image {...emojiMap[rating]} boxSize={'25px'} />
 }
 
 export default Emoji
